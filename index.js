@@ -93,6 +93,8 @@ app.delete('/api/persons/:id', (req, res) => {
   res.status(204).end()
 })
 
-app.listen(3001, () => {
-  console.log('Escuchando puerto 3001')
+const port = process.env.port
+
+app.listen(port, () => {
+  console.log(`Escuchando puerto ${port}`)
 })
