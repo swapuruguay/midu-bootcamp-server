@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swapuruguay/bootcamp-server.git"
+  },
+  "author": "Walter Sosa <sosa.tizon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swapuruguay/bootcamp-server/issues"
+  },
+  "homepage": "https://github.com/swapuruguay/bootcamp-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
