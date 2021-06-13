@@ -43,6 +43,9 @@ morgan.token('type', function (req) {
   return null
 })
 
+app.use(express.static('build'))
+
+
 app.use(morgan(':method :url :status :res[content-length] :response-time ms :type'))
 
 
