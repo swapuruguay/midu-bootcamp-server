@@ -81,7 +81,7 @@ app.post('/api/persons', (req, res, next) => {
   }
   const person = new Person(newPerson)
   person.save().then(result => {
-    res.json(result.toJSON())
+    res.status(201).json(result.toJSON())
   })
   .catch(error => next(error))
 })
