@@ -1,3 +1,5 @@
 node_modules
+.gitignore
+.env
 delete_person.rest
 insert_person.rest
