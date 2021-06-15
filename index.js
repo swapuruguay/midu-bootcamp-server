@@ -74,8 +74,9 @@ app.get('/api/persons', (req, res) => {
 })
 
 app.post('/api/persons', (req, res, next) => {
-  const newPerson = req.body
-  if (body.content === undefined) {
+  const body = req.body
+  const newPerson = body
+  if (body.name === undefined) {
     return res.status(400).json({ error: 'content missing' })  
   }
   const person = new Person(newPerson)
