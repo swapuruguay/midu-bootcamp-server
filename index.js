@@ -53,7 +53,7 @@ app.get('/api/persons/:id', (req, res, next) => {
     .catch(error => next(error))
 })
 
-app.put('/api/persons/:id', (req, res) => {
+app.put('/api/persons/:id', (req, res, next) => {
   const body = req.body
 
   const person = {
@@ -83,16 +83,16 @@ app.post('/api/persons', (req, res, next) => {
   person.save().then(result => {
     res.status(201).json(result.toJSON())
   })
-  .catch(error => next(error))
+    .catch(error => next(error))
 })
 
 
-app.delete('/api/persons/:id', (req, res) => {
- Person.findByIdAndRemove(req.params.id)
-  .then(() => {
-    res.status(204).end()
-  })
-  .catch(err => next(err))
+app.delete('/api/persons/:id', (req, res, next) => {
+  Person.findByIdAndRemove(req.params.id)
+    .then(() => {
+      res.status(204).end()
+    })
+    .catch(err => next(err))
 })
 
 
